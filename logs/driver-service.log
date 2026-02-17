@@ -1,0 +1,245 @@
+2026-02-17T12:40:51.033+05:30  INFO 5080 --- [driver-service] [restartedMain] c.z.d.DriverServiceApplication           : Starting DriverServiceApplication using Java 21.0.3 with PID 5080 (C:\RideHandling Platform\driver-service\target\classes started by soumy in C:\RideHandling Platform)
+2026-02-17T12:40:51.041+05:30  INFO 5080 --- [driver-service] [restartedMain] c.z.d.DriverServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-02-17T12:40:51.092+05:30  INFO 5080 --- [driver-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-17T12:40:51.092+05:30  INFO 5080 --- [driver-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-17T12:40:51.877+05:30  INFO 5080 --- [driver-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-17T12:40:51.953+05:30  INFO 5080 --- [driver-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 4 JPA repository interfaces.
+2026-02-17T12:40:52.610+05:30  INFO 5080 --- [driver-service] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8082 (http)
+2026-02-17T12:40:52.629+05:30  INFO 5080 --- [driver-service] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2026-02-17T12:40:52.630+05:30  INFO 5080 --- [driver-service] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-02-17T12:40:52.683+05:30  INFO 5080 --- [driver-service] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2026-02-17T12:40:52.684+05:30  INFO 5080 --- [driver-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1590 ms
+2026-02-17T12:40:52.768+05:30  WARN 5080 --- [driver-service] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.postgresql.Driver
+2026-02-17T12:40:52.771+05:30  INFO 5080 --- [driver-service] [restartedMain] o.a.c.c.StandardService                  : Stopping service [Tomcat]
+2026-02-17T12:40:52.783+05:30  INFO 5080 --- [driver-service] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-02-17T12:40:52.800+05:30 ERROR 5080 --- [driver-service] [restartedMain] o.s.b.SpringApplication                  : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.postgresql.Driver
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) [spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) [spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) [spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-3.2.5.jar:3.2.5]
+	at com.zeta.driver_service.DriverServiceApplication.main(DriverServiceApplication.java:10) [classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) [spring-boot-devtools-3.2.5.jar:3.2.5]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.postgresql.Driver
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 24 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.postgresql.Driver
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 24 more
+Caused by: java.lang.IllegalStateException: Cannot load driver class: org.postgresql.Driver
+	at org.springframework.util.Assert.state(Assert.java:97) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:175) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.jdbc.PropertiesJdbcConnectionDetails.getDriverClassName(PropertiesJdbcConnectionDetails.java:49) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:55) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:117) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 24 more
+
+2026-02-17T12:42:17.606+05:30  INFO 6968 --- [driver-service] [restartedMain] c.z.d.DriverServiceApplication           : Starting DriverServiceApplication using Java 21.0.3 with PID 6968 (C:\RideHandling Platform\driver-service\target\classes started by soumy in C:\RideHandling Platform)
+2026-02-17T12:42:17.613+05:30  INFO 6968 --- [driver-service] [restartedMain] c.z.d.DriverServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-02-17T12:42:17.658+05:30  INFO 6968 --- [driver-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-17T12:42:17.659+05:30  INFO 6968 --- [driver-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-17T12:42:18.369+05:30  INFO 6968 --- [driver-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-17T12:42:18.494+05:30  INFO 6968 --- [driver-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 4 JPA repository interfaces.
+2026-02-17T12:42:19.023+05:30  INFO 6968 --- [driver-service] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8082 (http)
+2026-02-17T12:42:19.038+05:30  INFO 6968 --- [driver-service] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2026-02-17T12:42:19.038+05:30  INFO 6968 --- [driver-service] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-02-17T12:42:19.078+05:30  INFO 6968 --- [driver-service] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2026-02-17T12:42:19.079+05:30  INFO 6968 --- [driver-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1419 ms
+2026-02-17T12:42:19.257+05:30  INFO 6968 --- [driver-service] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-17T12:42:19.345+05:30  INFO 6968 --- [driver-service] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-02-17T12:42:19.388+05:30  INFO 6968 --- [driver-service] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2026-02-17T12:42:19.681+05:30  INFO 6968 --- [driver-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-17T12:42:19.726+05:30  INFO 6968 --- [driver-service] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2026-02-17T12:42:19.951+05:30  INFO 6968 --- [driver-service] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@77fab0d3
+2026-02-17T12:42:19.952+05:30  INFO 6968 --- [driver-service] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2026-02-17T12:42:20.028+05:30  WARN 6968 --- [driver-service] [restartedMain] o.h.o.deprecation                        : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-17T12:42:21.437+05:30  INFO 6968 --- [driver-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-17T12:42:21.523+05:30  WARN 6968 --- [driver-service] [restartedMain] o.h.e.j.s.SqlExceptionHelper             : SQL Warning Code: 0, SQLState: 00000
+2026-02-17T12:42:21.523+05:30  WARN 6968 --- [driver-service] [restartedMain] o.h.e.j.s.SqlExceptionHelper             : constraint "uk_re66mdta4hy6pxm2w1rqu08jv" of relation "drivers" does not exist, skipping
+2026-02-17T12:42:21.526+05:30  WARN 6968 --- [driver-service] [restartedMain] o.h.e.j.s.SqlExceptionHelper             : SQL Warning Code: 0, SQLState: 00000
+2026-02-17T12:42:21.526+05:30  WARN 6968 --- [driver-service] [restartedMain] o.h.e.j.s.SqlExceptionHelper             : constraint "uk_cr60ij36fuvtcb87298g6rct6" of relation "drivers" does not exist, skipping
+2026-02-17T12:42:21.528+05:30  WARN 6968 --- [driver-service] [restartedMain] o.h.e.j.s.SqlExceptionHelper             : SQL Warning Code: 0, SQLState: 00000
+2026-02-17T12:42:21.528+05:30  WARN 6968 --- [driver-service] [restartedMain] o.h.e.j.s.SqlExceptionHelper             : constraint "uk_k8g8tftyclmpgp3a5l0ni1nhk" of relation "drivers" does not exist, skipping
+2026-02-17T12:42:21.532+05:30  INFO 6968 --- [driver-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17T12:42:22.187+05:30  WARN 6968 --- [driver-service] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'driverController' defined in file [C:\RideHandling Platform\driver-service\target\classes\com\zeta\driver_service\controller\DriverController.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'driverAvailabilityService' defined in file [C:\RideHandling Platform\driver-service\target\classes\com\zeta\driver_service\service\DriverAvailabilityService.class]: Unsatisfied dependency expressed through constructor parameter 5: Error creating bean with name 'metricsService' defined in file [C:\RideHandling Platform\driver-service\target\classes\com\zeta\driver_service\service\MetricsService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'io.micrometer.core.instrument.MeterRegistry' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-02-17T12:42:22.188+05:30  INFO 6968 --- [driver-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17T12:42:22.190+05:30  INFO 6968 --- [driver-service] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2026-02-17T12:42:22.200+05:30  INFO 6968 --- [driver-service] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2026-02-17T12:42:22.208+05:30  INFO 6968 --- [driver-service] [restartedMain] o.a.c.c.StandardService                  : Stopping service [Tomcat]
+2026-02-17T12:42:22.218+05:30  INFO 6968 --- [driver-service] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-02-17T12:42:22.236+05:30 ERROR 6968 --- [driver-service] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.zeta.driver_service.service.MetricsService required a bean of type 'io.micrometer.core.instrument.MeterRegistry' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'io.micrometer.core.instrument.MeterRegistry' in your configuration.
+
+2026-02-17T12:43:21.867+05:30  INFO 14052 --- [driver-service] [restartedMain] c.z.d.DriverServiceApplication           : Starting DriverServiceApplication using Java 21.0.3 with PID 14052 (C:\RideHandling Platform\driver-service\target\classes started by soumy in C:\RideHandling Platform)
+2026-02-17T12:43:21.877+05:30  INFO 14052 --- [driver-service] [restartedMain] c.z.d.DriverServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-02-17T12:43:21.925+05:30  INFO 14052 --- [driver-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-17T12:43:21.925+05:30  INFO 14052 --- [driver-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-17T12:43:22.862+05:30  INFO 14052 --- [driver-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-17T12:43:22.913+05:30  INFO 14052 --- [driver-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 4 JPA repository interfaces.
+2026-02-17T12:43:23.654+05:30  INFO 14052 --- [driver-service] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8082 (http)
+2026-02-17T12:43:23.666+05:30  INFO 14052 --- [driver-service] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2026-02-17T12:43:23.667+05:30  INFO 14052 --- [driver-service] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-02-17T12:43:23.705+05:30  INFO 14052 --- [driver-service] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2026-02-17T12:43:23.707+05:30  INFO 14052 --- [driver-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1780 ms
+2026-02-17T12:43:24.024+05:30  INFO 14052 --- [driver-service] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-17T12:43:24.065+05:30  INFO 14052 --- [driver-service] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-02-17T12:43:24.091+05:30  INFO 14052 --- [driver-service] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2026-02-17T12:43:24.271+05:30  INFO 14052 --- [driver-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-17T12:43:24.292+05:30  INFO 14052 --- [driver-service] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2026-02-17T12:43:24.414+05:30  INFO 14052 --- [driver-service] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7b6d7efb
+2026-02-17T12:43:24.416+05:30  INFO 14052 --- [driver-service] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2026-02-17T12:43:24.443+05:30  WARN 14052 --- [driver-service] [restartedMain] o.h.o.deprecation                        : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-17T12:43:25.326+05:30  INFO 14052 --- [driver-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-17T12:43:25.371+05:30  INFO 14052 --- [driver-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17T12:43:25.947+05:30  WARN 14052 --- [driver-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-17T12:43:26.591+05:30  INFO 14052 --- [driver-service] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 4 endpoint(s) beneath base path '/actuator'
+2026-02-17T12:43:26.661+05:30  INFO 14052 --- [driver-service] [restartedMain] o.s.s.w.DefaultSecurityFilterChain       : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@63273d0b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11d10040, org.springframework.security.web.context.SecurityContextHolderFilter@ff5dc86, org.springframework.security.web.header.HeaderWriterFilter@4a76c005, org.springframework.web.filter.CorsFilter@6fa5c288, org.springframework.security.web.authentication.logout.LogoutFilter@6d8404d0, com.zeta.driver_service.security.JwtRequestFilter@1e59f927, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@395375af, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71eeaf1c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f1c93b7, org.springframework.security.web.session.SessionManagementFilter@7a2e5c6b, org.springframework.security.web.access.ExceptionTranslationFilter@658f24c7, org.springframework.security.web.access.intercept.AuthorizationFilter@30150b20]
+2026-02-17T12:43:27.018+05:30  INFO 14052 --- [driver-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-17T12:43:27.095+05:30  INFO 14052 --- [driver-service] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8082 (http) with context path ''
+2026-02-17T12:43:27.107+05:30  INFO 14052 --- [driver-service] [restartedMain] c.z.d.DriverServiceApplication           : Started DriverServiceApplication in 5.744 seconds (process running for 6.608)
+2026-02-17T12:47:26.112+05:30  INFO 14052 --- [driver-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17T12:47:26.127+05:30  INFO 14052 --- [driver-service] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2026-02-17T12:47:26.145+05:30  INFO 14052 --- [driver-service] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2026-02-17T13:00:34.071+05:30  INFO 2392 --- [driver-service] [restartedMain] c.z.d.DriverServiceApplication           : Starting DriverServiceApplication using Java 21.0.3 with PID 2392 (C:\RideHandling Platform\driver-service\target\classes started by soumy in C:\RideHandling Platform)
+2026-02-17T13:00:34.079+05:30  INFO 2392 --- [driver-service] [restartedMain] c.z.d.DriverServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-02-17T13:00:34.125+05:30  INFO 2392 --- [driver-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-17T13:00:34.125+05:30  INFO 2392 --- [driver-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-17T13:00:35.101+05:30  INFO 2392 --- [driver-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-17T13:00:35.155+05:30  INFO 2392 --- [driver-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
+2026-02-17T13:00:35.820+05:30  INFO 2392 --- [driver-service] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8082 (http)
+2026-02-17T13:00:35.833+05:30  INFO 2392 --- [driver-service] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2026-02-17T13:00:35.833+05:30  INFO 2392 --- [driver-service] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-02-17T13:00:35.897+05:30  INFO 2392 --- [driver-service] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2026-02-17T13:00:35.899+05:30  INFO 2392 --- [driver-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1771 ms
+2026-02-17T13:00:36.385+05:30  INFO 2392 --- [driver-service] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-17T13:00:36.459+05:30  INFO 2392 --- [driver-service] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-02-17T13:00:36.526+05:30  INFO 2392 --- [driver-service] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2026-02-17T13:00:36.884+05:30  INFO 2392 --- [driver-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-17T13:00:36.930+05:30  INFO 2392 --- [driver-service] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2026-02-17T13:00:37.138+05:30  INFO 2392 --- [driver-service] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1d139cf1
+2026-02-17T13:00:37.140+05:30  INFO 2392 --- [driver-service] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2026-02-17T13:00:37.189+05:30  WARN 2392 --- [driver-service] [restartedMain] o.h.o.deprecation                        : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-17T13:00:39.715+05:30  INFO 2392 --- [driver-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-17T13:00:39.811+05:30  INFO 2392 --- [driver-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17T13:00:40.874+05:30  WARN 2392 --- [driver-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-17T13:00:41.552+05:30  INFO 2392 --- [driver-service] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 4 endpoint(s) beneath base path '/actuator'
+2026-02-17T13:00:41.706+05:30  INFO 2392 --- [driver-service] [restartedMain] o.s.s.w.DefaultSecurityFilterChain       : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2843c4bb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1371870b, org.springframework.security.web.context.SecurityContextHolderFilter@34382353, org.springframework.security.web.header.HeaderWriterFilter@5243bc14, org.springframework.web.filter.CorsFilter@5283b22f, org.springframework.security.web.authentication.logout.LogoutFilter@782b45cf, com.zeta.driver_service.security.JwtRequestFilter@389ed60d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@561cc5f5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f90ce05, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@86ab561, org.springframework.security.web.session.SessionManagementFilter@5073e515, org.springframework.security.web.access.ExceptionTranslationFilter@4c8dc430, org.springframework.security.web.access.intercept.AuthorizationFilter@2fe99162]
+2026-02-17T13:00:42.361+05:30  WARN 2392 --- [driver-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-02-17T13:00:42.437+05:30  INFO 2392 --- [driver-service] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8082 (http) with context path ''
+2026-02-17T13:00:42.453+05:30  INFO 2392 --- [driver-service] [restartedMain] c.z.d.DriverServiceApplication           : Started DriverServiceApplication in 8.91 seconds (process running for 9.75)
+2026-02-17T13:26:55.779+05:30  INFO 2392 --- [driver-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17T13:26:55.786+05:30  INFO 2392 --- [driver-service] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2026-02-17T13:26:55.798+05:30  INFO 2392 --- [driver-service] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2026-02-17T13:26:59.938+05:30  INFO 11372 --- [driver-service] [restartedMain] c.z.d.DriverServiceApplication           : Starting DriverServiceApplication using Java 21.0.3 with PID 11372 (C:\RideHandling Platform\driver-service\target\classes started by soumy in C:\RideHandling Platform)
+2026-02-17T13:26:59.945+05:30  INFO 11372 --- [driver-service] [restartedMain] c.z.d.DriverServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-02-17T13:26:59.990+05:30  INFO 11372 --- [driver-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-17T13:26:59.990+05:30  INFO 11372 --- [driver-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-17T13:27:01.152+05:30  INFO 11372 --- [driver-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-17T13:27:01.214+05:30  INFO 11372 --- [driver-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces.
+2026-02-17T13:27:01.954+05:30  INFO 11372 --- [driver-service] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8082 (http)
+2026-02-17T13:27:01.973+05:30  INFO 11372 --- [driver-service] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2026-02-17T13:27:01.974+05:30  INFO 11372 --- [driver-service] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-02-17T13:27:02.031+05:30  INFO 11372 --- [driver-service] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2026-02-17T13:27:02.032+05:30  INFO 11372 --- [driver-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2040 ms
+2026-02-17T13:27:02.414+05:30  INFO 11372 --- [driver-service] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-17T13:27:02.485+05:30  INFO 11372 --- [driver-service] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-02-17T13:27:02.555+05:30  INFO 11372 --- [driver-service] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2026-02-17T13:27:02.820+05:30  INFO 11372 --- [driver-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-17T13:27:02.849+05:30  INFO 11372 --- [driver-service] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2026-02-17T13:27:02.984+05:30  INFO 11372 --- [driver-service] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@722fd36f
+2026-02-17T13:27:02.986+05:30  INFO 11372 --- [driver-service] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2026-02-17T13:27:03.034+05:30  WARN 11372 --- [driver-service] [restartedMain] o.h.o.deprecation                        : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-17T13:27:04.007+05:30  INFO 11372 --- [driver-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-17T13:27:04.056+05:30  INFO 11372 --- [driver-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17T13:27:05.695+05:30  WARN 11372 --- [driver-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-17T13:27:06.055+05:30  INFO 11372 --- [driver-service] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 4 endpoint(s) beneath base path '/actuator'
+2026-02-17T13:27:06.127+05:30  INFO 11372 --- [driver-service] [restartedMain] o.s.s.w.DefaultSecurityFilterChain       : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@38c61a67, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69f99547, org.springframework.security.web.context.SecurityContextHolderFilter@4ddf3023, org.springframework.security.web.header.HeaderWriterFilter@13035d39, org.springframework.web.filter.CorsFilter@6446b481, org.springframework.security.web.authentication.logout.LogoutFilter@732e8eb3, com.zeta.driver_service.security.JwtRequestFilter@6283ace4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@43bfd131, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d7a2eb8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ec56360, org.springframework.security.web.session.SessionManagementFilter@61fccaa7, org.springframework.security.web.access.ExceptionTranslationFilter@9a0453e, org.springframework.security.web.access.intercept.AuthorizationFilter@15102994]
+2026-02-17T13:27:06.466+05:30  WARN 11372 --- [driver-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-02-17T13:27:06.514+05:30  INFO 11372 --- [driver-service] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8082 (http) with context path ''
+2026-02-17T13:27:06.522+05:30  INFO 11372 --- [driver-service] [restartedMain] c.z.d.DriverServiceApplication           : Started DriverServiceApplication in 7.136 seconds (process running for 8.265)
+2026-02-17T13:28:01.934+05:30  INFO 11372 --- [driver-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17T13:28:01.938+05:30  INFO 11372 --- [driver-service] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2026-02-17T13:28:01.955+05:30  INFO 11372 --- [driver-service] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.

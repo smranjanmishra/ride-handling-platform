@@ -1,0 +1,21 @@
+package com.zeta.notification_service.dto;
+
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class NotificationRequest {
+    @NotNull(message = "User ID is required")
+    private Long userId;
+
+    @NotNull(message = "Ride ID is required")
+    private Long rideId;
+
+    private String driverName;
+    private String riderName;
+    private Double amount;
+}

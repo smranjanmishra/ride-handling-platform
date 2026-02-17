@@ -1,0 +1,67 @@
+nameOverride: "zea-opc-b05-ridebooking-rider-service-soumyami"
+fullnameOverride: "zea-opc-b05-ridebooking-rider-service-soumyami"
+clusterName: zea-opc-b05-ridebooking-rider-service-soumyami
+hpa:
+  enabled: false
+
+replicaCount: 1
+image:
+  repository: 813361731051.dkr.ecr.ap-south-1.amazonaws.com
+  repositoryPath: zea-opc-b05-ridebooking-rider-service-soumyami
+  pullPolicy: Always
+  tag: 0.0.1-SNAPSHOT
+
+disablePropertiesConfigMap: true
+
+envProperties:
+  javaXms: 128M
+  javaXmx: 512M
+  APP_NAME: zea-opc-b05-ridebooking-rider-service-soumyami
+  KINESIS_ACCESSKEY: vault:secrets/data/zone/common/logging#KINESIS_ACCESSKEY
+  KINESIS_SECRETKEY: vault:secrets/data/zone/common/logging#KINESIS_SECRETKEY
+  KINESIS_REGION: vault:secrets/data/zone/common/logging#KINESIS_REGION
+
+resources:
+  limits:
+    memory: 2Gi
+  requests:
+    cpu: 1
+    memory: 1Gi
+
+serviceAccountName: zea-opc-b05-ridebooking-rider-service-soumyami
+
+service:
+  targetPort: 8080
+  port: 80
+  healthCheckPath: /health
+  livenessProbeInitialDelaySeconds: 60
+  readinessProbeInitialDelaySeconds: 60
+
+additionalPodAnnotations:
+  configmap.reloader.stakater.com/reload: "zea-opc-b05-ridebooking-rider-service-soumyami-env-configmap"
+  health.check.enable: "true"
+  health.check.module: http_2xx
+  health.check.path: "/health"
+
+serviceMonitor:
+  enabled: true
+
+volumeMounts: []
+
+olympusLabels:
+  olympusCluster: cluster
+  olympusClusterBU: bu
+  olympusClusterTeam: team-name
+  olympusZone: zone-name
+  olympusZoneEnv: zone-env
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
+podSecurityContext: {}
+securityContext: {}
+volumes: {}
+
+
+
+
