@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39995e94-198b-4e23-ae54-85338e577603" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/driver-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/driver-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/driver-service/src/main/java/com/zeta/driver_service/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/driver-service/src/main/java/com/zeta/driver_service/config/WebConfig.java" afterDir="false" />
